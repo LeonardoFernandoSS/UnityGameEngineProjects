@@ -63,6 +63,8 @@ public class ItemTransferTests
 
         yield return AddItemsStock();
 
+        yield return new WaitForSeconds(10);
+
         ItemTransfer itemTransfer = new ItemTransfer(inventory, stock);
 
         ItemData itemData = Resources.Load<ItemData>("Items/New Item Data");

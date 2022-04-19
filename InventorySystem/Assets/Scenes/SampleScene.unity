@@ -153,8 +153,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47519a5ced5b29d4c9623fbe405deeca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultItems: []
-  defaultMaxItems: 0
+  defaultItems:
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  defaultMaxItems: 10
 --- !u!114 &277032657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +176,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab91245c6ecf52489bc49f3e0a8c5c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultItems: []
-  defaultMaxItems: 0
+  defaultItems:
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  - {fileID: 11400000, guid: 711eeb8ac253dae40b7ef8ed52851763, type: 2}
+  defaultMaxItems: 5
 --- !u!4 &277032658
 Transform:
   m_ObjectHideFlags: 0
