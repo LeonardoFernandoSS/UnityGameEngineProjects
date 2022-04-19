@@ -29,7 +29,7 @@ namespace ItemSystem
 
         public void AddAmount()
         {
-            if (ItemData == null) return;
+            if (ItemData == null || Amount == ItemData.MaxAmount) return;
 
             Amount++;
 
@@ -38,7 +38,7 @@ namespace ItemSystem
 
         public void SubtractAmount()
         {
-            if (Amount == 0) return;
+            if (Amount == 0 || Amount == 0) return;
 
             Amount--;
 

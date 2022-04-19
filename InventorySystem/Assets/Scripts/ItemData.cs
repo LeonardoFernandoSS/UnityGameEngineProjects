@@ -7,7 +7,18 @@ namespace ItemSystem
     [CreateAssetMenu]
     public class ItemData : ScriptableObject
     {
-        [SerializeField] public string Name { get; private set; }
-        [SerializeField] public float MaxAmount { get; private set; }
+        [SerializeField] private new string name;
+        [SerializeField] private int maxAmount;
+
+        public string Name { get => name; private set => name = value; }
+        public int MaxAmount { get => maxAmount; private set => maxAmount = value; }
+
+        public ItemData() { }
+
+        public ItemData(string name, int maxAmount) 
+        {
+            this.name = name;
+            this.maxAmount = maxAmount;
+        }
     }
 }

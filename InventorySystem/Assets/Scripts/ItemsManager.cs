@@ -8,7 +8,7 @@ namespace ItemSystem.Management
     public abstract class ItemsManager : MonoBehaviour
     {
         [SerializeField] protected List<ItemData> defaultItems = new List<ItemData>();
-        [SerializeField] protected int defaultMaxItems = 0;
+        [SerializeField] protected int defaultMaxItems = 2;
 
         public ItemCollection ItemCollection { get; private set; }
 
