@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 
 namespace ScreenSystem
 {
@@ -8,12 +9,11 @@ namespace ScreenSystem
 
         public override IEnumerator Start()
         {
-            machine.CanvasGroup.interactable = true;
-            machine.CanvasGroup.blocksRaycasts = true;
-
             machine.onActivatedScreen?.Invoke();
 
-            machine.State = new InFrontScreen(machine);
+            yield return new WaitForSeconds(machine.ActiveTime);
+
+            machine.State = new IdleScreen(machine);
 
             yield break;
         }

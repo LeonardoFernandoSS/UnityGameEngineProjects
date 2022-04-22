@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 
 namespace ScreenSystem
 {
@@ -8,30 +9,13 @@ namespace ScreenSystem
 
         public override IEnumerator Start()
         {
-            if (!machine.isLocked) yield break;
-
-            machine.CanvasGroup.interactable = true;
-            machine.CanvasGroup.blocksRaycasts = true;
-
             machine.onUnlockedScreen?.Invoke();
 
+            yield return new WaitForSeconds(machine.UnlockTime);
+
+            machine.State = new IdleScreen(machine);
+
             yield break;
-        }
-
-        public override IEnumerator HideElements()
-        {
-            machine.State = new InactiveScreen(machine);
-
-            return base.HideElements();
-        }
-
-        public override IEnumerator LockElements()
-        {
-            machine.isLocked = true;
-
-            machine.State = new BehindScreen(machine);
-
-            return base.LockElements();
         }
     }
 }

@@ -18,20 +18,16 @@ namespace ScreenSystem
 
         public override IEnumerator UnlockElements()
         {
-            machine.isLocked = false;
-
             machine.State = new InFrontScreen(machine);
 
-            return base.UnlockElements();
+            yield break;
         }
 
         public override IEnumerator HideElements()
         {
-            machine.isLocked = false;
-
             machine.State = new InactiveScreen(machine);
 
-            return base.HideElements();
+            yield break;
         }
     }
 }

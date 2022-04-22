@@ -8,10 +8,10 @@ namespace ScreenSystem
 
         public override IEnumerator Start()
         {
+            machine.onInactivatedScreen?.Invoke();
+
             machine.CanvasGroup.interactable = false;
             machine.CanvasGroup.blocksRaycasts = false;
-
-            machine.onInactivatedScreen?.Invoke();
 
             yield break;
         }
@@ -20,7 +20,7 @@ namespace ScreenSystem
         {
             machine.State = new ActiveScreen(machine);
 
-            return base.ShowElements();
+            yield break;
         }
     }
 }

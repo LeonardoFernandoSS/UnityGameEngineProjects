@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 namespace ScreenSystem
@@ -31,13 +32,25 @@ namespace ScreenSystem
         [SerializeField] private bool isDefaultScreen;
 
         [Space(10)]
+        [SerializeField] private float activeTime;
+        [SerializeField] private float unlockTime;
+
+        [Space(10)]
+        [SerializeField] private GameObject defaultUIElement;
+
+        [Space(10)]
         [SerializeField] public UnityEvent onInactivatedScreen;
         [SerializeField] public UnityEvent onActivatedScreen;
         [SerializeField] public UnityEvent onLockedScreen;
         [SerializeField] public UnityEvent onUnlockedScreen;
 
         [HideInInspector] public CanvasGroup CanvasGroup { get => GetComponent<CanvasGroup>(); }
-        [HideInInspector] public bool isLocked { get; set; }        
+        [HideInInspector] public bool isLocked { get; set; }
+        
+        [HideInInspector] public float ActiveTime { get => activeTime; }
+        [HideInInspector] public float UnlockTime { get => unlockTime; }
+
+        [HideInInspector] public GameObject DefaultUIElement { get => defaultUIElement; }
 
         protected void Awake() 
         {

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace ScreenSystem
 {
@@ -9,12 +11,14 @@ namespace ScreenSystem
         //public static Action<ScreenUI> onOpenedScreen;
         //public static Action<ScreenUI> onClosedScreen;
         public static Action onDontHaveScreens;
-
+        
         private static Stack<ScreenUI> screens = new Stack<ScreenUI>();
+
+        private static Stack<GameObject> uiElements = new Stack<GameObject>();
 
         public static void OpenScreen(ScreenUI screen)
         {
-            if (screen == null) return;
+            if (screen is null) return;
 
             if (screens.Count > 0)
             {
@@ -30,7 +34,16 @@ namespace ScreenSystem
 
             screens.Push(screen);
 
+            GameObject uiElement = EventSystem.current.currentSelectedGameObject;
+
+            if (uiElement) uiElements.Push(uiElement);
+
+            if (screen.DefaultUIElement) EventSystem.current.SetSelectedGameObject(screen.DefaultUIElement);
+
             //onOpenedScreen?.Invoke(screen);
+
+            Debug.ClearDeveloperConsole();
+            Debug.Log(screens.Count);
         }
 
         public static void CloseScreen()
@@ -39,9 +52,9 @@ namespace ScreenSystem
 
             ScreenUI screen = screens.Pop();
 
-            if (screen == null) return;
-
             screen.HideElements();
+
+            if (uiElements.Count > 0) EventSystem.current.SetSelectedGameObject(uiElements.Pop());
 
             //onClosedScreen?.Invoke(screen);
 
@@ -49,15 +62,12 @@ namespace ScreenSystem
             {
                 ScreenUI old = screens.Peek();
 
-                if (!old)
-                {
-                    old.UnlockElements();
-                }
+                if (!old) old.UnlockElements();
             }
-            else
-            {
-                onDontHaveScreens?.Invoke();
-            }
+            else onDontHaveScreens?.Invoke();
+
+            Debug.ClearDeveloperConsole();
+            Debug.Log(screens.Count);
         }
     }
 }
