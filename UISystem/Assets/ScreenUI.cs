@@ -26,9 +26,9 @@ namespace ScreenSystem
             }
         }
 
-        protected void Awake() => State = new InactiveScreen(this);
-
         #endregion
+
+        [SerializeField] private bool isDefaultScreen;
 
         [Space(10)]
         [SerializeField] public UnityEvent onInactivatedScreen;
@@ -37,7 +37,14 @@ namespace ScreenSystem
         [SerializeField] public UnityEvent onUnlockedScreen;
 
         [HideInInspector] public CanvasGroup CanvasGroup { get => GetComponent<CanvasGroup>(); }
-        [HideInInspector] public bool isLocked { get; set; }
+        [HideInInspector] public bool isLocked { get; set; }        
+
+        protected void Awake() 
+        {
+            State = new InactiveScreen(this);
+
+            if (isDefaultScreen) ScreenManager.OpenScreen(this);
+        }
 
         public void ShowElements() => StartCoroutine(State.ShowElements());
 
@@ -46,5 +53,9 @@ namespace ScreenSystem
         public void LockElements() => StartCoroutine(State.LockElements());
 
         public void UnlockElements() => StartCoroutine(State.UnlockElements());
+
+        public void OnClose() => ScreenManager.CloseScreen();
+
+        public void OnNext(ScreenUI screen) => ScreenManager.OpenScreen(screen);
     }
 }

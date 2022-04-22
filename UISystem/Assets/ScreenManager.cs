@@ -1,40 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace ScreenSystem.Management
+namespace ScreenSystem
 {
-    public class ScreenManager : MonoBehaviour
+    public static class ScreenManager
     {
-        #region Singleton
+        //public static Action<ScreenUI> onOpenedScreen;
+        //public static Action<ScreenUI> onClosedScreen;
+        public static Action onDontHaveScreens;
 
-        public static ScreenManager instance;
+        private static Stack<ScreenUI> screens = new Stack<ScreenUI>();
 
-        private void Awake()
-        {
-            if (!instance)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(this);
-            }
-        }
-
-        #endregion
-
-        public static Action<ScreenUI> onOpenedScreen;
-        public static Action<ScreenUI> onClosedScreen;
-
-        private Stack<ScreenUI> screens = new Stack<ScreenUI>();
-
-        [SerializeField] private ScreenUI defaultScreen;
-
-        private void Start() => instance.OpenScreen(defaultScreen);
-
-        public void OpenScreen(ScreenUI screen)
+        public static void OpenScreen(ScreenUI screen)
         {
             if (screen == null) return;
 
@@ -52,10 +30,10 @@ namespace ScreenSystem.Management
 
             screens.Push(screen);
 
-            onOpenedScreen?.Invoke(screen);
+            //onOpenedScreen?.Invoke(screen);
         }
 
-        public void OnCloseScreen()
+        public static void CloseScreen()
         {
             if (screens.Count == 0) return;
 
@@ -65,7 +43,7 @@ namespace ScreenSystem.Management
 
             screen.HideElements();
 
-            onClosedScreen?.Invoke(screen);
+            //onClosedScreen?.Invoke(screen);
 
             if (screens.Count > 0)
             {
@@ -75,7 +53,11 @@ namespace ScreenSystem.Management
                 {
                     old.UnlockElements();
                 }
-            }            
+            }
+            else
+            {
+                onDontHaveScreens?.Invoke();
+            }
         }
     }
 }
