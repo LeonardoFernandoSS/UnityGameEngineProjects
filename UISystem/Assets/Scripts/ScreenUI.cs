@@ -20,7 +20,7 @@ namespace ScreenSystem
             set
             {
                 state = value;
-
+                
                 onChangedState?.Invoke(state);
 
                 StartCoroutine(state.Start());

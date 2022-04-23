@@ -20,15 +20,7 @@ namespace ScreenSystem
         {
             if (screen is null) return;
 
-            if (screens.Count > 0)
-            {
-                ScreenUI old = screens.Peek();
-
-                if (!old)
-                {
-                    old.LockElements();
-                }
-            }            
+            LockScreen();           
 
             screen.ShowElements();
 
@@ -41,9 +33,6 @@ namespace ScreenSystem
             if (screen.DefaultUIElement) EventSystem.current.SetSelectedGameObject(screen.DefaultUIElement);
 
             //onOpenedScreen?.Invoke(screen);
-
-            Debug.ClearDeveloperConsole();
-            Debug.Log(screens.Count);
         }
 
         public static void CloseScreen()
@@ -58,16 +47,30 @@ namespace ScreenSystem
 
             //onClosedScreen?.Invoke(screen);
 
-            if (screens.Count > 0)
+            UnlockScreen();
+        }
+
+        private static void LockScreen()
+        {
+            if (screens.Count == 0) return;
+
+            ScreenUI old = screens.Peek();
+
+            if (!(old is null)) old.LockElements();
+        }
+
+        private static void UnlockScreen()
+        {
+            if (screens.Count == 0)
             {
-                ScreenUI old = screens.Peek();
+                onDontHaveScreens?.Invoke();
 
-                if (!old) old.UnlockElements();
+                return;
             }
-            else onDontHaveScreens?.Invoke();
 
-            Debug.ClearDeveloperConsole();
-            Debug.Log(screens.Count);
+            ScreenUI old = screens.Peek();
+
+            if (!(old is null)) old.UnlockElements();
         }
     }
 }
