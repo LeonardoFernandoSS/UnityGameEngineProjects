@@ -153,11 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2e6818ae632144d8a63cc5033ea87a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introduction:
-    informations:
-    - Information A
-    - Information B
-    - Information C
+  informations:
+  - Information A
+  - Information B
+  - Information C
 --- !u!4 &407140695
 Transform:
   m_ObjectHideFlags: 0

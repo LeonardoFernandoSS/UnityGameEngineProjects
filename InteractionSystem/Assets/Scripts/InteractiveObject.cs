@@ -13,12 +13,7 @@ namespace InteractionSystem
 
         [SerializeField] private List<string> informations;        
 
-        public bool InitInformations()
-        {
-            currentInformations = new Queue<string>(informations);
-
-            return NextInformation();
-        }
+        public void InitInformations() => currentInformations = new Queue<string>(informations);
 
         public bool NextInformation()
         {

@@ -8,11 +8,9 @@ namespace InteractionSystem
 
         public override IEnumerator Start()
         {
-            if (machine.focus.InitInformations()) yield break;
+            machine.focus.InitInformations();
 
-            machine.onStartedInteraction?.Invoke(machine.focus);
-
-            machine.State = new BusyInteractor(machine);
+            machine.OnStartInteraction();
 
             yield break;
         }
