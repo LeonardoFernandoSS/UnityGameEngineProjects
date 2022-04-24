@@ -7,20 +7,27 @@ namespace InteractionSystem
 {
     public abstract class InteractiveObject : MonoBehaviour
     {
-        public Action<string> onChangedDialog;
+        public Action<string> onChangedInformation;
 
-        [SerializeField] private List<string> dialogs;
+        private Queue<string> currentInformations;
 
-        public Queue<string> currentDialogs { get; private set; }
+        [SerializeField] private List<string> informations;        
 
-        public void InitDialogs()
+        public bool InitInformations()
         {
-            currentDialogs = new Queue<string>(dialogs);
+            currentInformations = new Queue<string>(informations);
 
-            NextDialog();
+            return NextInformation();
         }
 
-        public void NextDialog() => onChangedDialog?.Invoke(currentDialogs.Dequeue());
+        public bool NextInformation()
+        {
+            if (currentInformations.Count == 0) return false;
+
+            onChangedInformation?.Invoke(currentInformations.Dequeue());
+
+            return true;
+        }
 
         public abstract void Interact();
     }

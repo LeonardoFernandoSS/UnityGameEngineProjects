@@ -8,23 +8,31 @@ namespace InteractionSystem
 
         public override IEnumerator Start()
         {
-            machine.focus.InitDialogs();
+            if (machine.focus.InitInformations()) yield break;
+
+            machine.onStartedInteraction?.Invoke(machine.focus);
+
+            machine.State = new BusyInteractor(machine);
 
             yield break;
         }
 
         public override IEnumerator StartInteraction()
         {
-            if (machine.focus.currentDialogs.Count > 0)
-            {
-                machine.focus.NextDialog();
-
-                yield break;
-            }
+            if (machine.focus.NextInformation()) yield break;
 
             machine.onStartedInteraction?.Invoke(machine.focus);
 
             machine.State = new BusyInteractor(machine);            
+
+            yield break;
+        }
+
+        public override IEnumerator CancelInteraction()
+        {
+            machine.onCanceledInteraction?.Invoke(machine.focus);
+
+            machine.State = new DelayInteractor(machine);
 
             yield break;
         }

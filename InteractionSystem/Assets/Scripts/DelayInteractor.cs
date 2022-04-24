@@ -9,7 +9,7 @@ namespace InteractionSystem
 
         public override IEnumerator Start()
         {
-            machine.ResetInteractiveObject();
+            machine.ResetFocus();
 
             yield return new WaitForSeconds(1f);
 

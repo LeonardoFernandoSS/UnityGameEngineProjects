@@ -15,6 +15,8 @@ public class TesterInteraction : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && !(interactor.State is IdleInteractor)) interactor.OnCancelInteraction();
+
         if (Input.GetKeyDown(KeyCode.Space) && interactor.State is BusyInteractor) interactor.OnConfirmInteraction();
 
         if (Input.GetKeyDown(KeyCode.Space) && interactor.State is InitInteractor) interactor.OnStartInteraction();
@@ -24,7 +26,7 @@ public class TesterInteraction : MonoBehaviour
 
     public void TestFocus(InteractiveObject interactiveObject)
     {
-        interactiveObject.onChangedDialog += TestDialog;
+        interactiveObject.onChangedInformation += TestDialog;
     }
 
     public void TestStart(InteractiveObject interactiveObject)
@@ -34,11 +36,11 @@ public class TesterInteraction : MonoBehaviour
 
     public void TestCancelOrConfirm(InteractiveObject interactiveObject)
     {
-        interactiveObject.onChangedDialog -= TestDialog;
+        interactiveObject.onChangedInformation -= TestDialog;
     }
 
     public void TestDialog(string dialog)
     {
-        Debug.Log("Dialog: " + dialog);
+        Debug.Log("Information: " + dialog);
     }
 }

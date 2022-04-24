@@ -13,7 +13,7 @@ namespace InteractionSystem
 
         public override IEnumerator FocusInteraction()
         {
-            machine.FindInteractiveObject();
+            machine.FindFocus();
 
             if (machine.focus is null) yield break;
 

@@ -38,9 +38,9 @@ namespace InteractionSystem
 
         protected void Awake() => State = new IdleInteractor(this);
 
-        public void ResetInteractiveObject() => focus = null;
+        public void ResetFocus() => focus = null;
 
-        public void FindInteractiveObject()
+        public void FindFocus()
         {
             RaycastHit hit;
 
