@@ -24,22 +24,22 @@ public class TesterInteraction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && interactor.State is IdleInteractor) interactor.OnFocusInteraction();
     }
 
-    public void TestFocus(InteractiveObject interactiveObject)
+    private void TestFocus(IInteractable interactiveObject)
     {
-        interactiveObject.onChangedInformation += TestDialog;
+        interactiveObject.Introduction.onChangedInformation += TestDialog;
     }
 
-    public void TestStart(InteractiveObject interactiveObject)
+    private void TestStart(IInteractable interactiveObject)
     {
-        Debug.Log("Do you want to interact object: " + interactiveObject.name);
+        Debug.Log("Do you want to interact object?");
     }
 
-    public void TestCancelOrConfirm(InteractiveObject interactiveObject)
+    private void TestCancelOrConfirm(IInteractable interactiveObject)
     {
-        interactiveObject.onChangedInformation -= TestDialog;
+        interactiveObject.Introduction.onChangedInformation -= TestDialog;
     }
 
-    public void TestDialog(string dialog)
+    private void TestDialog(string dialog)
     {
         Debug.Log("Information: " + dialog);
     }

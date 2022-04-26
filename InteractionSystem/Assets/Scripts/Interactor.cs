@@ -26,12 +26,12 @@ namespace InteractionSystem
 
         #endregion
 
-        public Action<InteractiveObject> onFocusedInteraction;
-        public Action<InteractiveObject> onStartedInteraction;
-        public Action<InteractiveObject> onConfirmedInteraction;
-        public Action<InteractiveObject> onCanceledInteraction;
+        public Action<IInteractable> onFocusedInteraction;
+        public Action<IInteractable> onStartedInteraction;
+        public Action<IInteractable> onConfirmedInteraction;
+        public Action<IInteractable> onCanceledInteraction;
 
-        public InteractiveObject focus { get; private set; }
+        public IInteractable focus { get; private set; }
 
         [SerializeField] private float maxDistance = 5f;
         [SerializeField] private string interactiveTag = "Interactive";
@@ -48,7 +48,7 @@ namespace InteractionSystem
             {
                 if (hit.collider.CompareTag(interactiveTag))
                 {
-                    focus = hit.collider.GetComponent<InteractiveObject>();
+                    focus = hit.collider.GetComponent<IInteractable>();
                 }
             }
         }

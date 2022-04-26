@@ -8,7 +8,7 @@ namespace InteractionSystem
 
         public override IEnumerator Start()
         {
-            machine.focus.InitInformations();
+            machine.focus.Introduction.InitInformations();
 
             machine.OnStartInteraction();
 
@@ -17,7 +17,7 @@ namespace InteractionSystem
 
         public override IEnumerator StartInteraction()
         {
-            if (machine.focus.NextInformation()) yield break;
+            if (machine.focus.Introduction.NextInformation()) yield break;
 
             machine.onStartedInteraction?.Invoke(machine.focus);
 
