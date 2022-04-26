@@ -5,6 +5,14 @@ namespace InteractionSystem
 {
     public class InteractManager : MonoBehaviour
     {
+        #region Singleton
+
+        public static InteractManager instance;
+
+        protected void Awake() => instance = this;
+
+        #endregion
+
         #region StateMachine
 
         public Action<InteractorState> onChangedState;
@@ -26,17 +34,18 @@ namespace InteractionSystem
 
         #endregion
 
-        public Action<IInteractable> onFocusedInteraction;
-        public Action<IInteractable> onStartedInteraction;
-        public Action<IInteractable> onConfirmedInteraction;
-        public Action<IInteractable> onCanceledInteraction;
+        public static Action<IInteractable> onFocusedInteraction;
+        public static Action<IInteractable> onStartedInteraction;
+        public static Action<IInteractable> onConfirmedInteraction;
+        public static Action<IInteractable> onCanceledInteraction;
+        public static Action<IInteractable> onUnfocusedInteraction;
 
         public IInteractable focus { get; private set; }
 
         [SerializeField] private float maxDistance = 5f;
         [SerializeField] private string interactiveTag = "Interactive";
 
-        protected void Awake() => State = new IdleInteractor(this);
+        protected void Start() => State = new IdleInteractor(this);
 
         public void ResetFocus() => focus = null;
 

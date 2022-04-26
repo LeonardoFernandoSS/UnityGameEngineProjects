@@ -19,7 +19,7 @@ namespace InteractionSystem
         {
             if (machine.focus.Introduction.NextInformation()) yield break;
 
-            machine.onStartedInteraction?.Invoke(machine.focus);
+            InteractManager.onStartedInteraction?.Invoke(machine.focus);
 
             machine.State = new BusyInteractor(machine);            
 
@@ -28,7 +28,7 @@ namespace InteractionSystem
 
         public override IEnumerator CancelInteraction()
         {
-            machine.onCanceledInteraction?.Invoke(machine.focus);
+            InteractManager.onCanceledInteraction?.Invoke(machine.focus);
 
             machine.State = new DelayInteractor(machine);
 

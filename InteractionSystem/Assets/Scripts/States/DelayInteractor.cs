@@ -9,7 +9,9 @@ namespace InteractionSystem
 
         public override IEnumerator Start()
         {
-            machine.ResetFocus();
+            InteractManager.onUnfocusedInteraction?.Invoke(machine.focus);
+
+            machine.ResetFocus();            
 
             yield return new WaitForSeconds(1f);
 

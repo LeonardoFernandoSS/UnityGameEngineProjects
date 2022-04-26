@@ -15,7 +15,7 @@ namespace InteractionSystem
         {
             machine.focus.Interact();
 
-            machine.onConfirmedInteraction?.Invoke(machine.focus);
+            InteractManager.onConfirmedInteraction?.Invoke(machine.focus);
 
             machine.State = new DelayInteractor(machine);            
 
@@ -24,7 +24,7 @@ namespace InteractionSystem
 
         public override IEnumerator CancelInteraction()
         {
-            machine.onCanceledInteraction?.Invoke(machine.focus);
+            InteractManager.onCanceledInteraction?.Invoke(machine.focus);
 
             machine.State = new DelayInteractor(machine);           
 

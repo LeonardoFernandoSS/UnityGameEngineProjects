@@ -17,7 +17,7 @@ namespace InteractionSystem
 
             if (machine.focus is null) yield break;
 
-            machine.onFocusedInteraction?.Invoke(machine.focus);
+            InteractManager.onFocusedInteraction?.Invoke(machine.focus);
 
             machine.State = new InitInteractor(machine);            
 
