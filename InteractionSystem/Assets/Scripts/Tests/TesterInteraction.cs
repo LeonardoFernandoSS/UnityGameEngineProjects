@@ -3,7 +3,7 @@ using InteractionSystem;
 
 public class TesterInteraction : MonoBehaviour
 {
-    [SerializeField] private Interactor interactor;
+    [SerializeField] private InteractManager interactor;
 
     private void Start()
     {

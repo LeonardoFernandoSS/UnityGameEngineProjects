@@ -4,9 +4,9 @@ namespace InteractionSystem
 {
     public abstract class InteractorState
     {
-        protected Interactor machine;
+        protected InteractManager machine;
 
-        public InteractorState(Interactor machine) => this.machine = machine;
+        public InteractorState(InteractManager machine) => this.machine = machine;
 
         public abstract IEnumerator Start();
 

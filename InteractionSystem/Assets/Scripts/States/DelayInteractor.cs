@@ -5,7 +5,7 @@ namespace InteractionSystem
 {
     public class DelayInteractor : InteractorState
     {
-        public DelayInteractor(Interactor machine) : base(machine) { }
+        public DelayInteractor(InteractManager machine) : base(machine) { }
 
         public override IEnumerator Start()
         {

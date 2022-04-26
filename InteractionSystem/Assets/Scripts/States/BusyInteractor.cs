@@ -4,7 +4,7 @@ namespace InteractionSystem
 {
     public class BusyInteractor : InteractorState
     {
-        public BusyInteractor(Interactor machine) : base(machine) { }
+        public BusyInteractor(InteractManager machine) : base(machine) { }
 
         public override IEnumerator Start() 
         { 

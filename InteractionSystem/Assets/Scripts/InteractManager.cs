@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace InteractionSystem
 {
-    public class Interactor : MonoBehaviour
+    public class InteractManager : MonoBehaviour
     {
         #region StateMachine
 
