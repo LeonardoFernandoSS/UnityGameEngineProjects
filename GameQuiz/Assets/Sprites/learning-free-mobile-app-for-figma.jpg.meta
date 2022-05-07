@@ -1,0 +1,692 @@
+fileFormatVersion: 2
+guid: 4adbf7c207642db43a854be83cc657c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2778521580774231851
+    second: learning-free-mobile-app-for-figma_0
+  - first:
+      213: 6811357824972800262
+    second: learning-free-mobile-app-for-figma_1
+  - first:
+      213: 6608953356629368116
+    second: learning-free-mobile-app-for-figma_2
+  - first:
+      213: -2235755155837761489
+    second: learning-free-mobile-app-for-figma_3
+  - first:
+      213: -82099697853892292
+    second: learning-free-mobile-app-for-figma_4
+  - first:
+      213: -1734723890826382781
+    second: learning-free-mobile-app-for-figma_5
+  - first:
+      213: -9044725265569175933
+    second: learning-free-mobile-app-for-figma_6
+  - first:
+      213: -3868194979172383846
+    second: learning-free-mobile-app-for-figma_7
+  - first:
+      213: 438113170936879962
+    second: learning-free-mobile-app-for-figma_8
+  - first:
+      213: -9153573264891786234
+    second: learning-free-mobile-app-for-figma_9
+  - first:
+      213: 149435811984499032
+    second: learning-free-mobile-app-for-figma_10
+  - first:
+      213: 1216193739490724758
+    second: learning-free-mobile-app-for-figma_11
+  - first:
+      213: 2788982079698120151
+    second: learning-free-mobile-app-for-figma_12
+  - first:
+      213: 1127985634543168392
+    second: learning-free-mobile-app-for-figma_13
+  - first:
+      213: 6477832807209491535
+    second: learning-free-mobile-app-for-figma_14
+  - first:
+      213: 6953627968439252773
+    second: learning-free-mobile-app-for-figma_15
+  - first:
+      213: 2003185019522543905
+    second: learning-free-mobile-app-for-figma_16
+  - first:
+      213: 6026128725036222819
+    second: learning-free-mobile-app-for-figma_17
+  - first:
+      213: -9150860089814109757
+    second: learning-free-mobile-app-for-figma_18
+  - first:
+      213: -8085155686178951688
+    second: learning-free-mobile-app-for-figma_19
+  - first:
+      213: -7842751285419376095
+    second: learning-free-mobile-app-for-figma_20
+  - first:
+      213: 3778568943658779106
+    second: learning-free-mobile-app-for-figma_21
+  - first:
+      213: -4051813631257578368
+    second: learning-free-mobile-app-for-figma_22
+  - first:
+      213: -5125356646998277969
+    second: learning-free-mobile-app-for-figma_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4308.3335
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f0ece08aa4f8620800000000000000
+      internalID: 2778521580774231851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_1
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 4308.3335
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601c49b8addc68e50800000000000000
+      internalID: 6811357824972800262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_2
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 4308.3335
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dd407ef08b7bb50800000000000000
+      internalID: 6608953356629368116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_3
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 4308.3335
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28ca83088009f0e0800000000000000
+      internalID: -2235755155837761489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3447.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39704182c25cdef0800000000000000
+      internalID: -82099697853892292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_5
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 3447.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342f8efefc50de7e0800000000000000
+      internalID: -1734723890826382781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_6
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 3447.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386afbeba4eaa7280800000000000000
+      internalID: -9044725265569175933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_7
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 3447.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a930b783929615ac0800000000000000
+      internalID: -3868194979172383846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2586.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bdc159b9d741600800000000000000
+      internalID: 438113170936879962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_9
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2586.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ccc900d99f7f080800000000000000
+      internalID: -9153573264891786234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_10
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 2586.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851ee0a4417e21200800000000000000
+      internalID: 149435811984499032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_11
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 2586.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b066c23c9c0e010800000000000000
+      internalID: 1216193739490724758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1725.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd2651cc6474b620800000000000000
+      internalID: 2788982079698120151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_13
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1725.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b60b255f867af00800000000000000
+      internalID: 1127985634543168392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_14
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1725.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cd71cfd92e5e950800000000000000
+      internalID: 6477832807209491535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_15
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1725.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527fa0f9bcf308060800000000000000
+      internalID: 6953627968439252773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1217604792ebccb10800000000000000
+      internalID: 2003185019522543905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_17
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 864.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369cf8ac52c11a350800000000000000
+      internalID: 6026128725036222819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_18
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 864.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c1b45d4b3d910180800000000000000
+      internalID: -9150860089814109757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_19
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 864.3333
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fde29b8db1cbcf80800000000000000
+      internalID: -8085155686178951688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.333313
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12207d23243f82390800000000000000
+      internalID: -7842751285419376095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_21
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 3.333313
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1ca1e3f6c207430800000000000000
+      internalID: 3778568943658779106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_22
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 3.333313
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0847ec448f015c7c0800000000000000
+      internalID: -4051813631257578368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: learning-free-mobile-app-for-figma_23
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 3.333313
+        width: 430
+        height: 861.6667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa00b7ce8431fd8b0800000000000000
+      internalID: -5125356646998277969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

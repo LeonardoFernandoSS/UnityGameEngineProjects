@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5076561544202971311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1095268899988036666}
+  - component: {fileID: 2766107754062597785}
+  m_Layer: 0
+  m_Name: Question 10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1095268899988036666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076561544202971311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2766107754062597785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076561544202971311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0459fc20db3b9944c8caadf494345d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 10
+  description: "Qual o endere\xE7o de Broadcast da Subrede que um compuador com o
+    edere\xE7amento IPv4 192.168.0.21/29 pertence?"
+  correct: 192.168.0.23
+  incorrects:
+  - 255.255.255.0
+  - 11111111.11111111.11111111.11111000
+  - 192.168.255.16
+  comment: 
+  supports:
+  - "O endere\xE7o de broadcast \xE9 considerado o ultimo endere\xE7o da rede, ele
+    nunca pode ser atribuido nas configura\xE7\xF5es de endere\xE7amento IP para
+    a identifica\xE7\xE3o de nenhum n\xF3 da rede. Um m\xE9todo simples para sua
+    identifica\xE7\xE3o \xE9 utilizar o endere\xE7o IP de algum n\xF3 (computador/dispositivo
+    conectado a rede) da rede e a partir dele, identificar qual rede ou subrede o
+    n\xF3 est\xE1 inserido.Ao descobrir isso, o ultimo endere\xE7o IP da rede(ou
+    subrede) ser\xE1 o endere\xE7o de Broadcast."
+  support: 

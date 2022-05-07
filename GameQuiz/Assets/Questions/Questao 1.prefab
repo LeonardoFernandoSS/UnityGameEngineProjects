@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5116294695054220293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5116294695054220292}
+  - component: {fileID: 5116294695054220315}
+  m_Layer: 0
+  m_Name: Questao 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5116294695054220292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116294695054220293}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5116294695054220315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116294695054220293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0459fc20db3b9944c8caadf494345d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  description: "Qual a unica camada do modelo TCP/IP que recebe uma denomina\xE7\xE3o
+    diferente da encontrada no modelo OSI?"
+  correct: Interface
+  incorrects:
+  - Transporte
+  - "Aplica\xE7\xE3o"
+  - "Sess\xE3o"
+  comment: 
+  supports:
+  - "No modelo TCP/IP cada camada possui sua correspondencia na camada ou conjunto
+    de camadas no modelo OSI. O modelo OSI possui 7 camadas, que vai desde a camada
+    fisica at\xE9 a de aplica\xE7\xE3o, enquanto o TCP/IP possui apenas 4. Independentemente
+    do modelo a ser seguido, todos os protocolos obedecem crit\xE9rios para serem
+    seguidos em cada uma das camadas de cada modelo. De forma geral existem 3 agentes
+    respons\xE1veis que cuidam de cada conjunto de protocolos e conjunto de camadas.
+    Os tr\xEAs agentes s\xE3o respectivamente: adaptador de rede, Sistema Operacional
+    e Aplicativo. Os 3 agentes servem para ambos os modelos de de implementa\xE7\xE3o
+    de camadas. "
+  support: 
