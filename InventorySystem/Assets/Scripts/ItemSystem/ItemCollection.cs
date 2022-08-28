@@ -18,6 +18,22 @@ namespace ItemSystem
         public List<Item> Items { get => items; }
         public int MaxItems { get => maxItems; }
 
+        public bool CheckMixItems(MixData mixData) 
+        {
+            ItemCollection clone = Clone();
+
+            foreach (Item item in mixData.Items)
+            {
+                Item aux = clone.Items.Find(x => x.ItemData == item.ItemData && x.Amount <= item.Amount);
+
+                if (aux is null) return false;
+
+                clone.RemoveItem(item);
+            }
+
+            return true;
+        }
+
         public bool CheckSendItem(Item item) => items.Exists(x => x == item);
 
         public bool CheckReceiveItem(Item item) {
@@ -27,6 +43,11 @@ namespace ItemSystem
             if (items.Count < maxItems) return true;
 
             return true;
+        }
+        
+        private ItemCollection Clone()
+        {
+            return (ItemCollection)MemberwiseClone();
         }
 
         private bool AllocateAmount(Item item, int amount)
@@ -88,6 +109,32 @@ namespace ItemSystem
 
             onChangedItem?.Invoke(item);
         }
+        
+        public void MixItems(MixData mixData)
+        {
+            if (!mixData.CheckItems()) return;
+
+            foreach (Item item in mixData.Items)
+            {
+                int amount = item.Amount;
+
+                while (amount > 0)
+                {
+                    Item aux = items.FindLast(x => x.ItemData == item.ItemData);
+
+                    if (aux is null) break;
+
+                    amount = aux.SubtractAmount(amount);
+
+                    if (aux.Amount == 0) items.Remove(aux);
+
+                }
+            }
+
+            Item clone = mixData.Item.Clone();
+
+            AddItem(clone);
+        }
 
         public bool AddItem(Item item)
         {
@@ -96,9 +143,10 @@ namespace ItemSystem
             if (aux != null)
             {
                 int offset = aux.AddAmount(item.Amount);
-
-                item.SetAmount(item.Amount - offset);
                 
+                //item.SetAmount(item.Amount - offset);
+                item.SetAmount(offset);
+
                 onChangedItem?.Invoke(aux);
 
                 if (item.Amount > 0) return AddItem(item);

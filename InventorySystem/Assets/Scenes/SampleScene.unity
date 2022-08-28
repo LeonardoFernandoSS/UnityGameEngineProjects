@@ -158,6 +158,8 @@ MonoBehaviour:
       amount: 10
     - itemData: {fileID: 11400000, guid: 78b4c28c7677a0842898bdc605345aa8, type: 2}
       amount: 1
+    - itemData: {fileID: 11400000, guid: 78b4c28c7677a0842898bdc605345aa8, type: 2}
+      amount: 1
     maxItems: 10
 --- !u!4 &277032658
 Transform:
@@ -206,6 +208,7 @@ MonoBehaviour:
   playerStock: {fileID: 277032657}
   environmentStock: {fileID: 1042239108}
   pickupItem: {fileID: 1774654953}
+  mixData: {fileID: 11400000, guid: 8c3b5ac8059cbc948a5705e648cc5273, type: 2}
 --- !u!4 &307725826
 Transform:
   m_ObjectHideFlags: 0
@@ -432,6 +435,10 @@ MonoBehaviour:
     items:
     - itemData: {fileID: 11400000, guid: b7b5b36e5c2eaea41b4d12772279ba9b, type: 2}
       amount: 10
+    - itemData: {fileID: 11400000, guid: 78b4c28c7677a0842898bdc605345aa8, type: 2}
+      amount: 1
+    - itemData: {fileID: 11400000, guid: 78b4c28c7677a0842898bdc605345aa8, type: 2}
+      amount: 1
     maxItems: 30
 --- !u!4 &1042239109
 Transform:

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using ItemSystem.Data;
 
 namespace ItemSystem.Managers
 {
@@ -25,6 +25,17 @@ namespace ItemSystem.Managers
             itemCollection.ReceiveItem(item);
 
             this.itemCollection.SendItem(item);
+
+            return true;
+        }
+
+        public bool MixerItem(MixData mixItemData)
+        {
+            if (!itemCollection.CheckMixItems(mixItemData) || !mixItemData.CheckItems()) return false;
+            
+            itemCollection.MixItems(mixItemData);
+
+            onChangeItemCollection?.Invoke(itemCollection);
 
             return true;
         }

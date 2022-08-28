@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using ItemSystem;
 using ItemSystem.Managers;
+using ItemSystem.Data;
 
 public class TesterItemSystem : MonoBehaviour
 {
     public PlayerStock playerStock;
     public EnvironmentStock environmentStock;
     public PickupItem pickupItem;
+    public MixData mixData;
 
     private void Update()
     {
@@ -30,6 +32,24 @@ public class TesterItemSystem : MonoBehaviour
         {
             TestPickupItem();
         }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            TestMixerItem();
+        }
+    }
+
+    void TestMixerItem()
+    {
+        if (!mixData) return;
+
+        playerStock.onChangeItemCollection += DebugPlayerSotck;
+
+        ItemCollection itemCollection = playerStock.ItemCollection;
+
+        if (itemCollection.Items.Count == 0) return;
+
+        playerStock.MixerItem(mixData);
     }
 
     void TestPlayerStock()
