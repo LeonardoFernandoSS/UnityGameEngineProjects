@@ -4,8 +4,20 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using ItemSystem;
 
-public class ItemCollectionTests
+public class ItemCollectionTests //: ICollectableItem//, IInteractableObject
 {
+    /*
+    private int amount = 10;
+
+    public ItemData ItemData { get => Resources.Load<ItemData>("Items/New Item Data"); }
+
+    public int Amount { get => amount; }
+
+    public void CollectItem(ItemCollection itemCollection)
+    {
+        itemCollection.AddItem(ItemData);
+    }
+
     [UnityTest]
     public IEnumerator AddOneItemData()
     {
@@ -23,7 +35,7 @@ public class ItemCollectionTests
 
         itemCollection.Items.ForEach(x => Debug.Log(x.ItemData.Name + ": " + x.Amount));
 
-        itemCollection.AddItem(itemData);
+        CollectItem(itemCollection);
 
         Debug.Log("---");
 
@@ -62,4 +74,6 @@ public class ItemCollectionTests
 
         yield return null;
     }
+
+    */
 }
