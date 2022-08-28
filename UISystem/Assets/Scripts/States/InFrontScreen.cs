@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace ScreenSystem
+namespace ScreenSystem.States
 {
     public class InFrontScreen : ScreenState
     {

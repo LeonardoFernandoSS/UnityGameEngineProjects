@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace ScreenSystem
+namespace ScreenSystem.States
 {
     public class IdleScreen : ScreenState
     {

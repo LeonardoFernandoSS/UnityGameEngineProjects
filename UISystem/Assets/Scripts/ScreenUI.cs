@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Events;
+using ScreenSystem.States;
 
 namespace ScreenSystem
 {
@@ -29,6 +29,8 @@ namespace ScreenSystem
 
         #endregion
 
+        [Header("Screen UI")]
+        [Space(10)]
         [SerializeField] private bool isDefaultScreen;
 
         [Space(10)]
@@ -38,6 +40,7 @@ namespace ScreenSystem
         [Space(10)]
         [SerializeField] private GameObject defaultUIElement;
 
+        [Header("Screen UI Events")]
         [Space(10)]
         [SerializeField] public UnityEvent onInactivatedScreen;
         [SerializeField] public UnityEvent onActivatedScreen;

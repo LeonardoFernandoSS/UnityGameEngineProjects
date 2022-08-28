@@ -8,8 +8,6 @@ namespace ScreenSystem
 {
     public static class ScreenManager
     {
-        //public static Action<ScreenUI> onOpenedScreen;
-        //public static Action<ScreenUI> onClosedScreen;
         public static Action onDontHaveScreens;
         
         private static Stack<ScreenUI> screens = new Stack<ScreenUI>();
@@ -30,9 +28,7 @@ namespace ScreenSystem
 
             if (uiElement) uiElements.Push(uiElement);
 
-            if (screen.DefaultUIElement) EventSystem.current.SetSelectedGameObject(screen.DefaultUIElement);
-
-            //onOpenedScreen?.Invoke(screen);
+            if (screen.DefaultUIElement) SelectElement(screen.DefaultUIElement);
         }
 
         public static void CloseScreen()
@@ -43,10 +39,8 @@ namespace ScreenSystem
 
             screen.HideElements();
 
-            if (uiElements.Count > 0) EventSystem.current.SetSelectedGameObject(uiElements.Pop());
-
-            //onClosedScreen?.Invoke(screen);
-
+            if (uiElements.Count > 0) SelectElement(uiElements.Pop());
+    
             UnlockScreen();
         }
 
@@ -72,5 +66,7 @@ namespace ScreenSystem
 
             if (!(old is null)) old.UnlockElements();
         }
+
+        private static void SelectElement(GameObject uiElements) => EventSystem.current.SetSelectedGameObject(uiElements);
     }
 }
